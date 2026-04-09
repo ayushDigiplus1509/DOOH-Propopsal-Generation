@@ -964,11 +964,6 @@ def health_check():
         "timestamp": datetime.now().isoformat()
     })
 
-# Keeping the old route for compatibility during transition if needed, but updating it to PDF too
-@app.route("/generate-ppt", methods=["POST"])
-def generate_ppt_compatibility():
-    return generate_pdf()
-
 application = app
 
 if __name__ == "__main__":
